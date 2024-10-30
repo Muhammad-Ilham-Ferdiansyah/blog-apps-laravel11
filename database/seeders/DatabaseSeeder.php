@@ -38,10 +38,10 @@ class DatabaseSeeder extends Seeder
         //     'slug' => 'judul-artikel-1',
         //     'body' => 'Dalam contoh ini, pertama-tama kita tentukan beberapa gaya CSS untuk textarea guna mengatur tinggi minimum, padding, ukuran font, tinggi baris, dan menonaktifkan pengubahan ukuran. Kemudian, kita gunakan jQuery untuk melampirkan event handler ke inputevent textarea. Event ini aktif setiap kali konten textarea berubah.'
         // ]);
-        $this->call([CategorySeeder::class, UserSeeder::class]);
-        Post::factory(100)->recycle([
-            Category::all(),
-            User::all()
-        ])->create();
+        $this->call([CategorySeeder::class, UserSeeder::class, PostSeeder::class]);
+        // Post::factory(100)->recycle([
+        //     Category::all(),
+        //     User::all()
+        // ])->create();
     }
 }
